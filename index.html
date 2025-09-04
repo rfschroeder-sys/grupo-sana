@@ -46,11 +46,6 @@
   <main class="max-w-6xl mx-auto px-6 py-10">
     <h2 class="text-2xl md:text-3xl font-bold mb-6">Opções de estampa</h2>
 
-    <!-- Dica para trocar imagens -->
-    <div class="mb-6 p-4 rounded-xl bg-amber-50 text-amber-900 ring-1 ring-amber-200">
-      <p class="text-sm"><strong>Como usar:</strong> Substitua os <em>placeholders</em> de imagem clicando em <span class="font-medium">“Trocar imagem”</span> em cada cartão, ou edite este arquivo e altere os URLs no array <code>OPTIONS</code>. Você pode arrastar soltar imagens também.</p>
-    </div>
-
     <section id="optionsGrid" class="grid gap-6 md:grid-cols-3">
       <!-- Os cartões são injetados por JS a partir do array OPTIONS -->
     </section>
@@ -110,13 +105,13 @@
         id: crypto.randomUUID(),
         title: 'Camiseta 02 — "Terra em espiral (sátira)"',
         desc: 'Graphic novel: água caindo da borda em espiral.',
-        img: 'https://placehold.co/800x600/png?text=Camiseta+02'
+        img: 'image2.png?text=Camiseta+02'
       },
       {
         id: crypto.randomUUID(),
         title: 'Camiseta 03 — "Terra esférica com cascatas"',
         desc: 'Graphic novel: água escorrendo no espaço (sem humanos).',
-        img: 'https://placehold.co/800x600/png?text=Camiseta+03'
+        img: 'image3.png?text=Camiseta+03'
       }
     ];
 
@@ -161,7 +156,6 @@
           <div class="relative">
             <img src="${opt.img}" alt="${opt.title}" class="w-full h-56 object-cover" draggable="false" />
             <input type="file" accept="image/*" class="absolute top-3 left-3 bg-white/90 text-sm px-3 py-1 rounded-lg shadow hidden" />
-            <button class="absolute top-3 right-3 bg-white/90 text-sm px-3 py-1 rounded-lg shadow hover:bg-white" data-action="change-img">Trocar imagem</button>
           </div>
           <div class="p-5 flex-1 flex flex-col">
             <h3 class="font-semibold text-lg">${opt.title}</h3>
